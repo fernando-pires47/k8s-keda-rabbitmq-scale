@@ -9,14 +9,14 @@ spec:
     name: app-consumer
   minReplicaCount: 1  # Minimum number of replicas
   maxReplicaCount: 7 # Maximum number of replicas
+  pollingInterval: 30  # Override default polling interval (in seconds)
+  cooldownPeriod: 300  # Override default cooldown period (in seconds)
   triggers:
     - type: rabbitmq
       metadata:
         queueName: queue-teste
         host: amqp://admin:admin@rabbitmq-service.default.svc.cluster.local:5672
         queueLength: "20"
-      pollingInterval: "30"  # Override default polling interval (in seconds)
-      cooldownPeriod: "300"  # Override default cooldown period (in seconds)
 #    - type: cron
 #      metadata:
 #        timezone: "America/Sao_Paulo" # Optional, depends on your requirement

@@ -52,8 +52,8 @@ KEDA will check the queue length (or any metric) every 30 seconds (default polli
 To override these default values in order to test the provisioning, access the file `scaled-object.yml` and set the properties:
 
 ```bash
-pollingInterval="30"
-cooldownPeriod="300"
+pollingInterval=30
+cooldownPeriod=300
 ```
 
 ### Conclusion
